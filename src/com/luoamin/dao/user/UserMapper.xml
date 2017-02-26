@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.luoamin.dao.user.IUserMapper">
+<!-- 要看好配置文件，尤其要看好符号，#{username}不要写成#（username） -->
+    
+ 
+ 	<select id="login" parameterType="AminPamas" resultType="User">
+ 		select id,username,password from keke_admin_user where email=#{email} and password=#{password} and forbiden=1
+ 	</select>
+ 
+</mapper>
